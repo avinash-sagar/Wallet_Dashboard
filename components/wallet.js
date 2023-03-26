@@ -75,7 +75,7 @@ function Wallet() {
         <p className="expence_bal">
           {expenceDetails()?.reduce(
             (a, it) => {
-              return (Number(a) + Number(it?.balance))
+              return Math.abs((-Number(a) + Number(it?.balance)))
             },
             expenceDetails().length == 0 ? 0 : ""
           )}{" "}

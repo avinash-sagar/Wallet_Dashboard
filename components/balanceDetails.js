@@ -80,7 +80,7 @@ function BalanceDetails() {
                         </Col>
                         <Col lg={7}>
                           <div className="bal_details">
-                            <h4>{ Number(item.balance) < 0 ? (item.balance).toString().slice(1) : item.balance} </h4>
+                            <h4>{ Number(item.balance) < 0 ? Math.abs(item.balance): item.balance} </h4>
                           </div>
                         </Col>
                         <Col lg={1}>
